@@ -1,19 +1,70 @@
-#gameboard{
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+#gameboard {
     width: 320px;
     height: 320px;
-    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    border: 4px solid #3a2a1a;
+    margin-top: 20px;
 }
 
 .square {
     height: 40px;
     width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.biege{
-    background-color: rgb(110,110,98);
+.square svg {
+    height: 30px;
+    width: 30px;
+    position: relative;
 }
 
-.brown{
-    background-color: rgb(169,43,43);
+.piece {
+    position: relative;
+    cursor: grab;
 }
 
+.piece:active {
+    cursor: grabbing;
+}
+
+.beige {
+    background-color: rgb(110, 110, 98);
+}
+
+.brown {
+    background-color: rgb(169, 43, 43);
+}
+
+.black {
+    fill: rgb(28, 28, 28);
+}
+
+.white {
+    fill: rgb(255, 253, 253);
+}
+
+#player {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#info-diplay {
+    min-height: 1.2em;
+    color: #ff6b6b;
+    font-weight: bold;
+}
